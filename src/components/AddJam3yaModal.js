@@ -29,7 +29,7 @@ export default function AddJam3yaModal() {
 
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" className="add" onClick={handleShow}>
         Add jam3ya
       </Button>
 
