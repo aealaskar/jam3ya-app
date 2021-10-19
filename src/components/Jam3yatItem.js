@@ -1,4 +1,5 @@
 import { Card, Button } from "react-bootstrap";
+import Moment from "react-moment";
 export default function Jam3yatItem(props) {
   const jam3ya = props.jam3ya;
   return (
@@ -21,24 +22,3 @@ export default function Jam3yatItem(props) {
     </div>
   );
 }
-
-// export default function CourseItem(props) {
-//   const course = props.course;
-//   return (
-//     <div class="col-xl-4 col-lg-4 col-md-6">
-//       <div class="single-course wow fadeInUp" data-wow-delay=".2s">
-//         <div class="course-img">
-//           <a href="course-single.html">
-//             <img src={course.image} alt="" />
-//           </a>
-//         </div>
-//         <div class="course-info">
-//           <h4>
-//             <a href="course-single.html">{course.title}</a>
-//           </h4>
-//           <div class="course-meta">Instructor : {course.instructor}</div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
