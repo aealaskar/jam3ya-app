@@ -1,5 +1,6 @@
 import { makeAutoObservable } from "mobx";
 import api from "./api";
+import authStore from "./authStore";
 
 class Jam3yatStore {
   jam3yat = [];
@@ -24,12 +25,13 @@ class Jam3yatStore {
     }
   };
 
-  joinJam3ya = async (user, _id) => {
+  joinJam3ya = async (jam3yaId) => {
     try {
-      const res = await api.post(`/jam3ya/join/${user.id}`, user);
-      this.jam3yat = this.jam3yat.map((jam3ya) =>
-        jam3ya.id === _id ? jam3ya.user.push(res.data) : jam3ya
+      await api.post(`/jam3ya/join/${jam3yaId}`);
+      const foundJam3ya = this.jam3yat.find(
+        (jam3ya) => jam3ya._id === jam3yaId
       );
+      foundJam3ya.users.push(authStore.user);
     } catch (error) {
       console.log(error);
     }

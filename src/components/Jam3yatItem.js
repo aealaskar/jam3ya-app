@@ -1,17 +1,14 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import authStore from "../stores/authStore";
+
 import jam3yatStore from "../stores/jam3yatStore";
 // import Moment from "react-moment";
 export default function Jam3yatItem(props) {
   const jam3ya = props.jam3ya;
   const handleSubmit = (e) => {
     e.preventDefault();
-    jam3yatStore.joinJam3ya(authStore.user, jam3ya.id);
+    jam3yatStore.joinJam3ya(jam3ya._id);
   };
-  const jam3yaUsers = jam3yatStore.jam3yat.map((_jam3ya) =>
-    jam3ya.id === _jam3ya.id ? _jam3ya.users : _jam3ya
-  );
 
   return (
     <div>
@@ -23,7 +20,8 @@ export default function Jam3yatItem(props) {
           <Link to={`/details/${jam3ya.slug}`}>
             <Button variant="primary">View Jam3ya</Button>
           </Link>
-          {jam3yaUsers.length < jam3ya.limit ? (
+          {jam3ya.users.length < jam3ya.limit &&
+          new Date(jam3ya.startDate) > new Date() ? (
             <Button className="join" onClick={handleSubmit}>
               Join
             </Button>
