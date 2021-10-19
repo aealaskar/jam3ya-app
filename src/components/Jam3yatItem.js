@@ -2,7 +2,7 @@ import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import jam3yatStore from "../stores/jam3yatStore";
-// import Moment from "react-moment";
+// import Moment from "react-moment";:
 export default function Jam3yatItem(props) {
   const jam3ya = props.jam3ya;
   const handleSubmit = (e) => {
