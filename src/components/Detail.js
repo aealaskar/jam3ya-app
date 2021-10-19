@@ -12,12 +12,6 @@ function Detail() {
   return (
     <div>
       <div>
-        {/* <h5>{jam3yaDetail.title}</h5>
-        <img src={jam3yaDetail.image} alt={jam3yaDetail.title} />
-        <p>{jam3yaDetail.amount} KD</p>
-        <p> Starts at {jam3yaDetail.startDate}</p>
-        <p> Ends at {jam3yaDetail.endDate}</p>
-        <p>{jam3yaDetail.limit} Humans</p> */}
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={jam3yaDetail.image} />
 
