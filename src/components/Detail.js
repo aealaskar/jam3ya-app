@@ -10,23 +10,19 @@ function Detail() {
   );
 
   return (
-    <div>
-      <div>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={jam3yaDetail.image} />
+    <>
+      <Card className="detail">
+        <Card.Img variant="top" src={jam3yaDetail.image} />
 
-          <Card.Body>
-            <Card.Title>{jam3yaDetail.title}</Card.Title>
-            <Card.Title>{jam3yaDetail.amount} KD</Card.Title>
-            <Card.Title>{jam3yaDetail.limit} Participants</Card.Title>
-            <Card.Title>Starts From: {jam3yaDetail.startDate}</Card.Title>
-            <Card.Title>Ends in: {jam3yaDetail.endDate}</Card.Title>
-          </Card.Body>
-        </Card>
-
-        {/* {console.log(slug)} */}
-      </div>
-    </div>
+        <Card.Body className="cardfont">
+          <Card.Title>{jam3yaDetail.title}</Card.Title>
+          <Card.Title>{jam3yaDetail.amount} KD</Card.Title>
+          <Card.Title>{jam3yaDetail.limit} Participants</Card.Title>
+          <Card.Title>Starts From: {jam3yaDetail.startDate}</Card.Title>
+          <Card.Title>Ends in: {jam3yaDetail.endDate}</Card.Title>
+        </Card.Body>
+      </Card>
+    </>
   );
 }
 

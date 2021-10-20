@@ -59,6 +59,16 @@ class Jam3yatStore {
       console.log(error);
     }
   };
+  updateJam3ya = async (updatedJam3ya, jam3yaId) => {
+    try {
+      const res = await api.put(`/jam3ya/${jam3yaId}`, updatedJam3ya);
+      this.jam3yat = this.jam3yat.map((jam3ya) =>
+        jam3ya._id === jam3yaId ? res.data : jam3ya
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
 }
 const jam3yatStore = new Jam3yatStore();
 jam3yatStore.fetchjam3yat();

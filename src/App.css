@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-image: url("./image/download.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
 }
 .signin {
   margin-left: 20px;
@@ -15,4 +20,40 @@
 }
 .column {
   margin-bottom: 15px;
+}
+.username {
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.status {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.cards {
+  background-color: #fffffc;
+}
+.mainCard {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./image/download.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: rgb(253, 253, 253);
+}
+.cardfont {
+  font-size: 100px;
 }
