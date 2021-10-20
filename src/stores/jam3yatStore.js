@@ -36,20 +36,29 @@ class Jam3yatStore {
       console.log(error);
     }
   };
-  /*
-  deleteJam3ya = async () => {
+
+  deleteJam3ya = async (jam3yaId) => {
     try {
-      const res = await axios.post(
-        `https://coded-miniproject-jam3ya-be.herokuapp.com/jam3ya/${jam3yaId}}`
+      await api.delete(`/jam3ya/${jam3yaId}`);
+      this.jam3yat = this.jam3yat.filter((jam3ya) => jam3ya._id !== jam3yaId);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  leaveJam3ya = async (jam3yaId) => {
+    try {
+      await api.post(`/jam3ya/leave/${jam3yaId}`);
+      const leaveJam3ya = this.jam3yat.find(
+        (jam3ya) => jam3ya._id === jam3yaId
       );
-      this.jam3yat = this.jam3yat.filter(
-        (jam3ya) => jam3ya.author !== jam3ya.username
+      leaveJam3ya.users = leaveJam3ya.users.filter(
+        (user) => user._id !== authStore.user._id
       );
     } catch (error) {
       console.log(error);
     }
   };
-  */
 }
 const jam3yatStore = new Jam3yatStore();
 jam3yatStore.fetchjam3yat();
