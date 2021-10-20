@@ -9,7 +9,12 @@ import AddJam3yaModal from "./AddJam3yaModal";
 
 function NavBar() {
   return (
-    <Navbar className="navbar" bg="dark" variant="dark">
+    <Navbar
+      style={{ backgroundColor: "#E67F0D" }}
+      className="navbar"
+      bg="dark"
+      variant="dark"
+    >
       <Container>
         <Nav className="me-auto">
           {authStore.user ? (

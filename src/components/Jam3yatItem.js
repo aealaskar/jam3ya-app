@@ -44,14 +44,18 @@ function Jam3yatItem(props) {
           )}
           {new Date(jam3ya.startDate) > new Date() &&
             jam3ya.author.username === authStore?.user?.username && (
-              <Button onClick={handleDelete}>Delete</Button>
+              <Button className="delete" onClick={handleDelete}>
+                Delete
+              </Button>
             )}
           {new Date(jam3ya.startDate) < new Date() && <p>Jam3ya has Started</p>}
           {jam3ya.users
             .map((user) => user._id)
             .includes(authStore?.user?._id) &&
             new Date(jam3ya.startDate) > new Date() && (
-              <Button onClick={handleLeave}>Leave</Button>
+              <Button className="leave" onClick={handleLeave}>
+                Leave
+              </Button>
             )}
           {new Date(jam3ya.startDate) > new Date() &&
             jam3ya.author.username === authStore?.user?.username && (
