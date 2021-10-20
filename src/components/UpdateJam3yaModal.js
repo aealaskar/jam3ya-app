@@ -29,7 +29,7 @@ export default function UpdateJam3yaModal(props) {
 
   return (
     <div>
-      <Button variant="primary" className="update" onClick={handleShow}>
+      <Button variant="light" className="update" onClick={handleShow}>
         Update Jam3ya
       </Button>
 

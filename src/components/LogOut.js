@@ -9,7 +9,7 @@ function LogOut() {
   };
   return (
     <div>
-      <Button variant="primary" className="logout" onClick={handleSubmit}>
+      <Button variant="danger" className="logout" onClick={handleSubmit}>
         Log Out
       </Button>
     </div>

@@ -43,9 +43,6 @@
   border-radius: 20rem;
 }
 
-.card {
-}
-
 .detail {
   display: flex;
   align-items: center;
@@ -72,4 +69,7 @@
 }
 .update {
   margin-top: 10px;
+}
+.input {
+  margin-left: 30rem;
 }

@@ -29,7 +29,7 @@ export default function AddJam3yaModal() {
 
   return (
     <div>
-      <Button variant="primary" className="add" onClick={handleShow}>
+      <Button variant="light" className="add" onClick={handleShow}>
         Add jam3ya
       </Button>
 
@@ -95,7 +95,7 @@ export default function AddJam3yaModal() {
               className="mb-3"
               controlId="formBasicCheckbox"
             ></Form.Group>
-            <Button variant="primary" type="submit" onClick={handleClose}>
+            <Button variant="secondary" type="submit" onClick={handleClose}>
               Submit
             </Button>
           </Form>

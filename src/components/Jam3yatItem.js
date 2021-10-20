@@ -32,11 +32,11 @@ function Jam3yatItem(props) {
         <Card.Body className="cards">
           <Card.Title>{jam3ya.title}</Card.Title>
           <Link to={`/details/${jam3ya.slug}`}>
-            <Button variant="primary">View Jam3ya</Button>
+            <Button variant="light">View Jam3ya</Button>
           </Link>
           {jam3ya.users.length < jam3ya.limit &&
           new Date(jam3ya.startDate) > new Date() ? (
-            <Button className="join" onClick={handleSubmit}>
+            <Button variant="success" className="join" onClick={handleSubmit}>
               Join
             </Button>
           ) : (
@@ -44,7 +44,11 @@ function Jam3yatItem(props) {
           )}
           {new Date(jam3ya.startDate) > new Date() &&
             jam3ya.author.username === authStore?.user?.username && (
-              <Button className="delete" onClick={handleDelete}>
+              <Button
+                variant="danger"
+                className="delete"
+                onClick={handleDelete}
+              >
                 Delete
               </Button>
             )}
@@ -53,7 +57,7 @@ function Jam3yatItem(props) {
             .map((user) => user._id)
             .includes(authStore?.user?._id) &&
             new Date(jam3ya.startDate) > new Date() && (
-              <Button className="leave" onClick={handleLeave}>
+              <Button variant="warning" className="leave" onClick={handleLeave}>
                 Leave
               </Button>
             )}

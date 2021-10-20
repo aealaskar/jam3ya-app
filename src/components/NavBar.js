@@ -21,7 +21,7 @@ function NavBar() {
             <>
               <p className="username"> Hello {authStore.user.username}</p>
               <AddJam3yaModal />
-
+              <input className="input" placeholder="Look for a jam3ya"></input>
               <LogOut />
             </>
           ) : (
